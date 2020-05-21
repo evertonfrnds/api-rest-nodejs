@@ -4,5 +4,6 @@ const routes = express.Router()
 const userController = require('./controllers/UserController')
 
 routes.get('/users', userController.index)
+routes.post('/users', userController.create)
 
 module.exports = routes;
