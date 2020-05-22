@@ -4,13 +4,15 @@ const routes = express.Router()
 const userController = require('./controllers/UserController')
 const projectController = require('./controllers/ProjectController')
 
-routes.get('/users', userController.index)
-routes.post('/users', userController.create)
-routes.put('/users/:id', userController.update)
-routes.delete('/users/:id', userController.delete)
-
-//Project Routes
-
-routes.get('/projects', projectController.index)
+routes
+    //Users
+    .get('/users', userController.index)
+    .post('/users', userController.create)
+    .put('/users/:id', userController.update)
+    .delete('/users/:id', userController.delete)
+    //Project
+    .get('/projects', projectController.index)
+    .post('/projects', projectController.create)
+    .put('/projects/:id', projectController.update)
 
 module.exports = routes;

@@ -11,10 +11,10 @@ knex.schema.createTable('projects', function(table){
     .notNullable()
     .onDelete('CASCADE')
 
-  table.timestamp(true, true)
+  table.timestamps(true, true)
   
 })
 
 exports.down = knex =>
-knex.schema.dropTable('users')
+knex.schema.dropTable('projects')
 
